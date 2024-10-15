@@ -19,7 +19,7 @@ def gram_matrix(input_tensor):
 
 def load_vgg():
     vgg = tf.keras.applications.VGG19(weights = None)
-    vgg.load_weights('vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5')
+    vgg.load_weights('your_vgg_downloaded_weights.h5')
     vgg.trainable = False
     content_layer = ['block4_conv2']
     style_layers = ['block1_conv1', 'block2_conv1', 'block3_conv1', 'block4_conv1', 'block5_conv1']
